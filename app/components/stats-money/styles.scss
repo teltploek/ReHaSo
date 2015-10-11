@@ -1,0 +1,31 @@
+.legend {
+	&-list {
+		list-style: none;
+	}
+	&-item {
+		display: inline-block;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+		}
+
+		&--club {
+			&:before {
+				background-color: salmon;
+			}
+		}
+		&--prize {
+			&:before {
+				background-color: cyan;
+			}
+		}
+		&--reserved {
+			&:before {
+				background-color: lime;
+			}
+		}
+	}
+}
