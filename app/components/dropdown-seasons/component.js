@@ -2,8 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	actions: {
-		chosenSeason : function (chosenSeason) {
-			this.set('chosenSeason', chosenSeason);
+		chosenSeason : function (selectedSeason) {
+			this.set('selectedSeason', selectedSeason);
+
+			this.sendAction('pickedSeason', selectedSeason);
 		}
 	}
 });
