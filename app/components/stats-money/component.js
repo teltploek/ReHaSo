@@ -6,17 +6,24 @@ export default Ember.Component.extend({
 		
 		var chartEl = this.$('.chart-results', this.element);
 
+		var data = this.data.store.peekAll('money');
+		var membernames = this.data.mapProperty('membername');
+		var prizeMoney = this.data.mapProperty('prizemoney');
+		var clubMoney = this.data.mapProperty('clubmoney');
+		var reservedMoney = this.data.mapProperty('reservedmoney');
+
 		new Chartist.Bar(chartEl[0], {
-		  labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+		  labels: membernames,
 		  series: [
-		    [800000, 1200000, 1400000, 1300000],
-		    [200000, 400000, 500000, 300000],
-		    [100000, 200000, 400000, 600000]
+		    { className: 'bar-money-club', value : clubMoney },
+		    { className: 'bar-money-prize', value : prizeMoney },
+		    { className: 'bar-money-reserved', value : reservedMoney }
 		  ]
 		}, {
 		  stackBars: true,
 		  axisY: {
 		    labelInterpolationFnc: function(value) {
+		    	return value;
 		      return (value / 1000) + 'k';
 		    }
 		  }
