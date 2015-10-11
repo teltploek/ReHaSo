@@ -1,13 +1,31 @@
-<div class="chart chart-results"></div>
 
-<ul class="legend-list">
-	<li class="legend-item legend-item--club">
-		Klubpenge
-	</li>
-	<li class="legend-item legend-item--prize">
-		Præmiepenge
-	</li>
-	<li class="legend-item legend-item--reserved">
-		Reserveret
-	</li>
-</ul>
+<div class="card">
+	<div class="card-header">
+		Rejsepenge
+
+		<div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
+			<div class="btn-group" role="group" aria-label="First group">
+				{{dropdown-seasons chosenSeason=2015}}
+			</div>
+		</div>
+	</div>
+	<div class="card-block">
+		<div class="chart chart-results"></div>
+	</div>
+	<div class="card-footer text-muted">
+		<ul class="legend-list">
+			<li class="legend-item">
+				<span class="legend-item-badge legend-item-badge--club"></span>
+				Klubpenge
+			</li>
+			<li class="legend-item">
+				<span class="legend-item-badge legend-item-badge--prize"></span>
+				Præmiepenge
+			</li>
+			<li class="legend-item">
+				<span class="legend-item-badge legend-item-badge--reserved"></span>
+				Reserveret
+			</li>
+		</ul>
+	</div>
+</div>

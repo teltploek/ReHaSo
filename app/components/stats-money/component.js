@@ -7,10 +7,10 @@ export default Ember.Component.extend({
 		var chartEl = this.$('.chart-results', this.element);
 
 		var data = this.data.store.peekAll('money');
-		var membernames = this.data.mapProperty('membername');
-		var prizeMoney = this.data.mapProperty('prizemoney');
-		var clubMoney = this.data.mapProperty('clubmoney');
-		var reservedMoney = this.data.mapProperty('reservedmoney');
+		var membernames = this.data.mapBy('membername');
+		var prizeMoney = this.data.mapBy('prizemoney');
+		var clubMoney = this.data.mapBy('clubmoney');
+		var reservedMoney = this.data.mapBy('reservedmoney');
 
 		new Chartist.Bar(chartEl[0], {
 		  labels: membernames,

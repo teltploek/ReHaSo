@@ -1,153 +1,170 @@
-<table class="table table-bordered table-striped table-responsive">
-  <thead>
-    <tr>
-      <th data-sort-entity="name">Spiller</th>
-      <th data-sort-entity="appearances">
-        Antal spil
-        <i  data-original-title="Antal spil" 
-        data-content="
-        Antallet af spillerunder deltageren har deltaget i.
-        "
-        class="icon-question-sign" 
-        data-toggle="popover" 
-        data-placement="bottom" 
-        title=""></i>
-      </th>
-      <th data-sort-entity="points">
-        Point
 
-        <i  data-original-title="Point" 
-        data-content="
-        Det antal point deltageren har vundet.<br><br>
-        Udregnet efter følgende formel:<br><br>
-        Points = 10 * [sqrt(n)/sqrt(k)] * [1+log(b+0,25)]
-        <br><br>
-        Hvor:
-        <br><br>
-        n er antallet af deltagere<br>
-        k er slutplaceringen (k=1 for førstepladsen og så videre)<br>
-        b er buy-in i kr.<br>
-        "                 
-        class="icon-question-sign" 
-        data-toggle="popover" 
-        data-placement="bottom" 
-        title=""></i>
-      </th>
-      <th class="per-game" data-sort-entity="pointsPerGame">Point / spil</th>
-      <th data-sort-entity="hits">
-        KO
+<div class="card">
+  <div class="card-header">
+    Resultater
 
-        <i  data-original-title="Antal spil" 
-        data-content="
-        Antallet af knockouts. Med andre ord, antallet af deltagere denne deltager har elimineret.
-        "
-        class="icon-question-sign" 
-        data-toggle="popover" 
-        data-placement="bottom" 
-        title=""></i>
-      </th>
-      <th class="per-game" data-sort-entity="hitsPerGame">KO / spil</th>
-      <th data-sort-entity="moneyWon">
-        Kr.
+    <div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group" role="group" aria-label="First group">
+        {{dropdown-seasons chosenSeason=2015}}
+      </div>
+      <div class="btn-group" role="group" aria-label="Second group">
+        {{dropdown-rounds}}
+      </div>
+    </div>
+  </div>
+  <div class="card-block card-block--results">
+    <table class="table table-bordered table-striped table-results">
+      <thead>
+        <tr>
+          <th data-sort-entity="name">Spiller</th>
+          <th data-sort-entity="appearances">
+            Antal spil
+            <i  data-original-title="Antal spil" 
+            data-content="
+            Antallet af spillerunder deltageren har deltaget i.
+            "
+            class="icon-question-sign" 
+            data-toggle="popover" 
+            data-placement="bottom" 
+            title=""></i>
+          </th>
+          <th data-sort-entity="points">
+            Point
 
-        <i  data-original-title="Antal spil" 
-        data-content="
-        Det beløb i kr. som deltageren har vundet til sin rejsekonto.
-        "
-        class="icon-question-sign" 
-        data-toggle="popover" 
-        data-placement="bottom" 
-        title=""></i>
-      </th>
-      <th class="per-game" data-sort-entity="moneyWonPerGame">Kr. / spil</th>
-      <th data-sort-entity="inTheMoney">
-        ITM
+            <i  data-original-title="Point" 
+            data-content="
+            Det antal point deltageren har vundet.<br><br>
+            Udregnet efter følgende formel:<br><br>
+            Points = 10 * [sqrt(n)/sqrt(k)] * [1+log(b+0,25)]
+            <br><br>
+            Hvor:
+            <br><br>
+            n er antallet af deltagere<br>
+            k er slutplaceringen (k=1 for førstepladsen og så videre)<br>
+            b er buy-in i kr.<br>
+            "                 
+            class="icon-question-sign" 
+            data-toggle="popover" 
+            data-placement="bottom" 
+            title=""></i>
+          </th>
+          <th class="per-game" data-sort-entity="pointsPerGame">Point / spil</th>
+          <th data-sort-entity="hits">
+            KO
 
-        <i  data-original-title="Antal spil" 
-        data-content="
-        ITM står for &quot;In the money&quot;. Altså viser denne kolonne, hvor mange gange spilleren har opnået en placering der har givet præmieudbetaling.
-        "
-        class="icon-question-sign" 
-        data-toggle="popover" 
-        data-placement="bottom" 
-        title=""></i>
-      </th>
-      <th class="per-game" data-sort-entity="inTheMoneyPercentage">
-        ITM%
+            <i  data-original-title="Antal spil" 
+            data-content="
+            Antallet af knockouts. Med andre ord, antallet af deltagere denne deltager har elimineret.
+            "
+            class="icon-question-sign" 
+            data-toggle="popover" 
+            data-placement="bottom" 
+            title=""></i>
+          </th>
+          <th class="per-game" data-sort-entity="hitsPerGame">KO / spil</th>
+          <th data-sort-entity="moneyWon">
+            Kr.
 
-        <i  data-original-title="Antal spil" 
-        data-content="
-        ITM står for &quot;In the money&quot;. Altså viser denne kolonne, hvor ofte spilleren opnår en placering der giver præmieudbetaling.
-        "
-        class="icon-question-sign" 
-        data-toggle="popover" 
-        data-placement="bottom" 
-        title=""></i>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Brian Frisch</th>
-      <td>8</td>
-      <td>3.486</td>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.569</td>
-      <td>123</td>
-      <td>8</td>
-      <td>100%</td>
-    </tr>
-    <tr>
-      <th scope="row">Lasse Schelbeck</th>
-      <td>8</td>
-      <td>3.486</td>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.569</td>
-      <td>123</td>
-      <td>8</td>
-      <td>100%</td>
-    </tr>
-    <tr>
-      <th scope="row">Jacob Morville Schrøder</th>
-      <td>8</td>
-      <td>3.486</td>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.569</td>
-      <td>123</td>
-      <td>8</td>
-      <td>100%</td>
-    </tr>
-    <tr>
-      <th scope="row">Jesper Myhrmann</th>
-      <td>8</td>
-      <td>3.486</td>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.569</td>
-      <td>123</td>
-      <td>8</td>
-      <td>100%</td>
-    </tr>
-    <tr>
-      <th scope="row">Jens Nørskov</th>
-      <td>8</td>
-      <td>3.486</td>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1.569</td>
-      <td>123</td>
-      <td>8</td>
-      <td>100%</td>
-    </tr>
-  </tbody>
-</table>
+            <i  data-original-title="Antal spil" 
+            data-content="
+            Det beløb i kr. som deltageren har vundet til sin rejsekonto.
+            "
+            class="icon-question-sign" 
+            data-toggle="popover" 
+            data-placement="bottom" 
+            title=""></i>
+          </th>
+          <th class="per-game" data-sort-entity="moneyWonPerGame">Kr. / spil</th>
+          <th data-sort-entity="inTheMoney">
+            ITM
+
+            <i  data-original-title="Antal spil" 
+            data-content="
+            ITM står for &quot;In the money&quot;. Altså viser denne kolonne, hvor mange gange spilleren har opnået en placering der har givet præmieudbetaling.
+            "
+            class="icon-question-sign" 
+            data-toggle="popover" 
+            data-placement="bottom" 
+            title=""></i>
+          </th>
+          <th class="per-game" data-sort-entity="inTheMoneyPercentage">
+            ITM%
+
+            <i  data-original-title="Antal spil" 
+            data-content="
+            ITM står for &quot;In the money&quot;. Altså viser denne kolonne, hvor ofte spilleren opnår en placering der giver præmieudbetaling.
+            "
+            class="icon-question-sign" 
+            data-toggle="popover" 
+            data-placement="bottom" 
+            title=""></i>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Brian Frisch</th>
+          <td>8</td>
+          <td>3.486</td>
+          <td>8</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1.569</td>
+          <td>123</td>
+          <td>8</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <th scope="row">Lasse Schelbeck</th>
+          <td>8</td>
+          <td>3.486</td>
+          <td>8</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1.569</td>
+          <td>123</td>
+          <td>8</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <th scope="row">Jacob Morville Schrøder</th>
+          <td>8</td>
+          <td>3.486</td>
+          <td>8</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1.569</td>
+          <td>123</td>
+          <td>8</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <th scope="row">Jesper Myhrmann</th>
+          <td>8</td>
+          <td>3.486</td>
+          <td>8</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1.569</td>
+          <td>123</td>
+          <td>8</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <th scope="row">Jens Nørskov</th>
+          <td>8</td>
+          <td>3.486</td>
+          <td>8</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1.569</td>
+          <td>123</td>
+          <td>8</td>
+          <td>100%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 {{yield}}

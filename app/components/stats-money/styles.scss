@@ -1,4 +1,9 @@
-
+.card-header {
+	.btn-toolbar {
+		margin-right: -12px;
+    	margin-top: -4px;
+	}
+}
 
 .bar-money-club {
 	stroke: salmon;
@@ -13,29 +18,23 @@
 .legend {
 	&-list {
 		list-style: none;
+		margin: 0;
 	}
 	&-item {
 		display: inline-block;
 
-		&:before {
-			content: '';
+		&-badge {
 			display: inline-block;
-			width: 30px;
-			height: 30px;
-		}
+			width: 15px;
+			height: 15px;
 
-		&--club {
-			&:before {
+			&--club {
 				background-color: salmon;
 			}
-		}
-		&--prize {
-			&:before {
+			&--prize {
 				background-color: cyan;
 			}
-		}
-		&--reserved {
-			&:before {
+			&--reserved {
 				background-color: lime;
 			}
 		}
