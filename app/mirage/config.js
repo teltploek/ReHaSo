@@ -2,6 +2,11 @@ export default function() {
   this.namespace = 'api';
 
   this.get('/money');
+  this.get('/members');
+  this.get('/results');
+  this.get('/results/:season');
+
+  //this.get('/money/:season');
 
   // These comments are here to help you get started. Feel free to delete them.
 

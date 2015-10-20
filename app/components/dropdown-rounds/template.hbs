@@ -1,11 +1,12 @@
 <div class="dropdown">
-	<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		Rounds
+	<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		{{selectedRoundName}}
 	</button>
-	<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-		<a class="dropdown-item" href="#">1. Runde</a>
-		<a class="dropdown-item" href="#">2. Runde</a>
-		<a class="dropdown-item" href="#">3. Runde</a>
+	<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+		<a class="dropdown-item" href="#" data-name="All rounds" {{action 'chosenRound'}}>All rounds</a>
+		<a class="dropdown-item" href="#" data-name="Round 1" {{action 'chosenRound' 1}}>Round 1</a>
+		<a class="dropdown-item" href="#" data-name="Round 2" {{action 'chosenRound' 2}}>Round 2</a>
+		<a class="dropdown-item" href="#" data-name="Round 3" {{action 'chosenRound' 3}}>Round 3</a>
 	</div>
 </div>
 

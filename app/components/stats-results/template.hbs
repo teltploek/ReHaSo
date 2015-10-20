@@ -1,4 +1,3 @@
-
 <div class="card">
   <div class="card-header">
     Resultater
@@ -8,7 +7,7 @@
         {{dropdown-seasons pickedSeason='pickedSeason' selectedSeason=2015}}
       </div>
       <div class="btn-group" role="group" aria-label="Second group">
-        {{dropdown-rounds}}
+        {{dropdown-rounds pickedRound='pickedRound' selectedRoundName='All rounds'}}
       </div>
     </div>
   </div>
@@ -62,7 +61,7 @@
             title=""></i>
           </th>
           <th class="per-game" data-sort-entity="hitsPerGame">KO / spil</th>
-          <th data-sort-entity="moneyWon">
+          <th data-sort-entity="money">
             Kr.
 
             <i  data-original-title="Antal spil" 
@@ -74,7 +73,7 @@
             data-placement="bottom" 
             title=""></i>
           </th>
-          <th class="per-game" data-sort-entity="moneyWonPerGame">Kr. / spil</th>
+          <th class="per-game" data-sort-entity="moneyPerGame">Kr. / spil</th>
           <th data-sort-entity="inTheMoney">
             ITM
 
@@ -87,8 +86,20 @@
             data-placement="bottom" 
             title=""></i>
           </th>
-          <th class="per-game" data-sort-entity="inTheMoneyPercentage">
+          <th class="per-game" data-sort-entity="inTheMoneyPercent">
             ITM%
+
+            <i  data-original-title="Antal spil" 
+            data-content="
+            ITM står for &quot;In the money&quot;. Altså viser denne kolonne, hvor ofte spilleren opnår en placering der giver præmieudbetaling.
+            "
+            class="icon-question-sign" 
+            data-toggle="popover" 
+            data-placement="bottom" 
+            title=""></i>
+          </th>
+          <th class="per-game" data-sort-entity="firstOneOut">
+            1OUT
 
             <i  data-original-title="Antal spil" 
             data-content="
@@ -102,66 +113,21 @@
         </tr>
       </thead>
       <tbody>
+      {{#each results as |result|}}
         <tr>
-          <th scope="row">Brian Frisch</th>
-          <td>8</td>
-          <td>3.486</td>
-          <td>8</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1.569</td>
-          <td>123</td>
-          <td>8</td>
-          <td>100%</td>
+          <th scope="row">{{result.member.name}}</th>
+          <td>{{result.appearances}}</td>
+          <td>{{result.points}}</td>
+          <td>{{result.pointsPerGame}}</td>
+          <td>{{result.knockouts}}</td>
+          <td>{{result.knockoutsPerGame}}</td>
+          <td>{{result.money}}</td>
+          <td>{{result.moneyPerGame}}</td>
+          <td>{{result.inTheMoney}}</td>
+          <td>{{result.inTheMoneyPercent}}</td>
+          <td>{{result.firstOneOut}}</td>
         </tr>
-        <tr>
-          <th scope="row">Lasse Schelbeck</th>
-          <td>8</td>
-          <td>3.486</td>
-          <td>8</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1.569</td>
-          <td>123</td>
-          <td>8</td>
-          <td>100%</td>
-        </tr>
-        <tr>
-          <th scope="row">Jacob Morville Schrøder</th>
-          <td>8</td>
-          <td>3.486</td>
-          <td>8</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1.569</td>
-          <td>123</td>
-          <td>8</td>
-          <td>100%</td>
-        </tr>
-        <tr>
-          <th scope="row">Jesper Myhrmann</th>
-          <td>8</td>
-          <td>3.486</td>
-          <td>8</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1.569</td>
-          <td>123</td>
-          <td>8</td>
-          <td>100%</td>
-        </tr>
-        <tr>
-          <th scope="row">Jens Nørskov</th>
-          <td>8</td>
-          <td>3.486</td>
-          <td>8</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1.569</td>
-          <td>123</td>
-          <td>8</td>
-          <td>100%</td>
-        </tr>
+      {{/each}}
       </tbody>
     </table>
   </div>

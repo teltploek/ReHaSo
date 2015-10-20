@@ -16,12 +16,12 @@
 </div>
 <div class="row">
 	<div class="col-sm-12">
-		{{stats-results resultsSeasonPicked='resultsSeasonPicked' resultsRoundPicked='resultsRoundPicked'}}
+		{{stats-results results=model.results updateResults='updateResults'}}
 	</div>
 </div>
 <div class="row">
 	<div class="col-sm-12">
-		{{stats-money moneySeasonPicked='moneySeasonPicked' data=model.money}}
+		{{stats-money data=model.money moneySeasonPicked='moneySeasonPicked'}}
 	</div>
 </div>
 

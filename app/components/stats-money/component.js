@@ -12,10 +12,10 @@ export default Ember.Component.extend({
 		
 		var chartEl = this.$('.chart-results', this.element);
 
-		var data = this.data.store.peekAll('money');
-		var membernames = this.data.mapBy('membername');
-		var prizeMoney = this.data.mapBy('prizemoney');
-		var clubMoney = this.data.mapBy('clubmoney');
+		var data 					= this.data.store.peekAll('money');
+		var membernames 	= this.data.mapBy('member.name');
+		var prizeMoney 		= this.data.mapBy('prizemoney');
+		var clubMoney 		= this.data.mapBy('clubmoney');
 		var reservedMoney = this.data.mapBy('reservedmoney');
 
 		new Chartist.Bar(chartEl[0], {
@@ -30,7 +30,6 @@ export default Ember.Component.extend({
 		  axisY: {
 		    labelInterpolationFnc: function(value) {
 		    	return value;
-		      return (value / 1000) + 'k';
 		    }
 		  }
 		}).on('draw', function(data) {

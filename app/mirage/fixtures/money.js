@@ -1,31 +1,26 @@
 export default [
   {
-    memberid: 1, 
-    membername: 'Brian Frisch',
-    clubmoney: 300,
-    prizemoney: 1200,
-    reservedmoney: 0
+    member: 1,
+    clubmoney: Math.floor(Math.random() * 600) + 1,
+    prizemoney: Math.floor(Math.random() * 600) + 1,
+    reservedmoney: Math.floor(Math.random() * 600) + 1
   },
   {
-    memberid: 2, 
-    membername: 'Lasse Schelbeck',
-    clubmoney: 225,
-    prizemoney: 0,
-    reservedmoney: 1200
+    member: 2, 
+    clubmoney: Math.floor(Math.random() * 600) + 1,
+    prizemoney: Math.floor(Math.random() * 600) + 1,
+    reservedmoney: Math.floor(Math.random() * 600) + 1
   },
   {
-    memberid: 3, 
-    membername: 'Jacob Morville Schrøder',
-    clubmoney: 300,
-    prizemoney: 800,
-    reservedmoney: 0
+    member: 3, 
+    clubmoney: Math.floor(Math.random() * 600) + 1,
+    prizemoney: Math.floor(Math.random() * 600) + 1,
+    reservedmoney: Math.floor(Math.random() * 600) + 1
   },
   {
-    memberid: 4, 
-    membername: 'Kenneth Halberg',
-    clubmoney: 225,
-    prizemoney: 0,
-    reservedmoney: 0
+    member: 4, 
+    clubmoney: Math.floor(Math.random() * 600) + 1,
+    prizemoney: Math.floor(Math.random() * 600) + 1,
+    reservedmoney: Math.floor(Math.random() * 600) + 1
   }
-
 ];
